@@ -274,3 +274,16 @@ body {
     text-align: center;
   }
 }
+
+.savings-plan-page {
+  padding: 10vh 6vh 10vh 6vh;
+
+  span.description-text {
+    text-align: center;
+    font-size: 5.625vw;
+  }
+
+  input {
+    display: block;
+  }
+}
