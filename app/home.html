@@ -5,7 +5,7 @@ This application uses Bootstrap CSS3, JQuery and other libraries included by the
 <html class="no-js" lang="">
   <head>
     <meta charset="utf-8">
-    <title>Pocket Money</title>
+    <title>Home | Pocket Money</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -30,28 +30,32 @@ This application uses Bootstrap CSS3, JQuery and other libraries included by the
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <div class="signin">
-    	<div class="app-icon">
-    		<img src="images/app_logo.png"/>
-    	</div>
-    	<div class="signin-inputs">
-    		<div class="signin-input-element">
-				<img src="images/account_icon.png"/>
-				<input type="text" id="login-account-number" placeholder="Account Number"/>
-				<span class="underline"></span>
-    		</div>
-    		<div class="signin-input-element">
-    			<img src="images/password_icon.png"/>
-    			<input type="password" id="login-password" placeholder="******"/>
-    			<span class="underline"></span>
-    		</div>
-    	</div>
-    	<div class="signin-button">
-    		<button id="signin-button"><a href="home.html">Sign In</a></button>
-    	</div>
-    	<p><a href="charts.html">Forgot your password?</a></p>
+    <div class="home-page">
+        <div class="welcome-text">
+            <span>Welcome</span>
+            <img src="images/dots.png"/>
+        </div>
+        <p class="username" id="home-username">John Doe</p>
+        <p class="user-icon-image"><img src="images/human_icon_white.png"/></p>
+        <div class="button-elements">
+            <img class="icon-image" src="images/score_icon.png"/>
+            <div class="text-score-elements">
+                <span class="title-text">Your Score</span>
+                <span class="score-text">2000</span>
+            </div>
+        </div>
+         <p class="info-text">Click to view your trend data and comparison of your spending on different categories</p>
+        <div class="button-elements">
+            <img class="icon-image" src="images/money_icon.png"/>
+            <div class="text-score-elements">
+                <span class="title-text">Money Saved</span>
+                <span class="score-text">1000</span>
+            </div>
+        </div>
+         <p class="info-text">Click to view the amount of money you have saved and to change your savings plan</p>
     </div>
-    
+
+
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
