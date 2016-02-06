@@ -4,10 +4,11 @@ $icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 // endbower
 
-@import url(https://fonts.googleapis.com/css?family=Arimo|Trocchi');
+@import url(https://fonts.googleapis.com/css?family=Arimo|Trocchi|Abril+Fatface');
 
 $font-arimo: 'Arimo', sans-serif;
 $font-trocchi: 'Trocchi', serif;
+$font-abril-fatface: 'Abril Fatface', cursive;
 
 
 .browsehappy {
@@ -101,14 +102,21 @@ body {
 /*Custom styling begins here*/
 $background-color: #7ecdb5;
 $text-color: #595959;
+$text-secondary-color: #6c7160;
 $line-color: #ecf46c;
 $light-text-color: #ffffff;
+$button-color: #c9e883;
 body {
   background: $background-color;
 }
 
+/*signin page*/
 .signin {
   padding: 10vh 6vw 10vh 6vw;
+
+  a {
+    text-decoration: none;
+  }
 
   .app-icon {
     text-align: center;
@@ -164,5 +172,100 @@ body {
     font-size: 4.5vw;
     text-align: center;
     padding-top: 4vw;
+  }
+}
+
+/*home page*/
+
+.home-page {
+  padding: 10vh 6vh 10vh 6vh;
+  a {
+    text-decoration: none;
+  }
+
+  .welcome-text {
+      text-align: center;
+    span {
+      font-family: $font-abril-fatface;
+      color: $line-color;
+      font-size: 8vw;
+    }
+
+    img {
+      -ms-transform: rotate(90deg); /* IE 9 */
+      -webkit-transform: rotate(90deg); /* Chrome, Safari, Opera */
+      transform: rotate(90deg);
+      display: block;
+      width: 10vw;
+      padding-left: 10vw;
+    }
+  }
+
+  p.username {
+    font-family: $font-trocchi;
+    font-size: 7vw;
+    color: $text-color;
+    text-align: center;
+  }
+
+  p.user-icon-image {
+    text-align: center;
+    img {
+
+    }
+  }
+
+  .button-elements {
+    background: $button-color;
+    height: 18vw;
+    padding: 2vw;
+    width: 100%;
+    border: 1px solid $button-color;
+    border-radius: 6px;
+
+    img.icon-image {
+      height: 120%;
+      padding-bottom: 2vw;
+      margin-right: 2vw;
+      float: left;
+    }
+
+    .text-score-elements {
+      display: inline;
+      padding-left: 8vw;
+      span.title-text {
+        font-family: $font-trocchi;
+        font-size: 5vw;
+        color: $text-color;
+        line-height: 1.4;
+        padding-top: 2vw;
+      }
+      span.score-text {
+        display: block;
+        font-family: $font-arimo;
+        font-size: 5.25vw;
+        color: $light-text-color;
+        padding-left: 30vw;
+      }
+    }
+
+    img.dots-line {
+      height: 120%;
+      padding-bottom: 2vw;
+      display: inline;
+    }
+
+    img.arrow {
+      height: 120%;
+      padding-bottom: 2vw;
+    }
+
+  }
+
+  p.info-text {
+    font-family: $font-arimo;
+    color: $text-secondary-color;
+    font-size: 4vw;
+    text-align: center;
   }
 }
