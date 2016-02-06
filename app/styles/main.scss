@@ -4,6 +4,12 @@ $icon-font-path: "../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 // endbower
 
+@import url(https://fonts.googleapis.com/css?family=Arimo|Trocchi');
+
+$font-arimo: 'Arimo', sans-serif;
+$font-trocchi: 'Trocchi', serif;
+
+
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;
@@ -89,5 +95,74 @@ body {
   /* Remove the bottom border on the jumbotron for visual effect */
   .jumbotron {
     border-bottom: 0;
+  }
+}
+
+/*Custom styling begins here*/
+$background-color: #7ecdb5;
+$text-color: #595959;
+$line-color: #ecf46c;
+$light-text-color: #ffffff;
+body {
+  background: $background-color;
+}
+
+.signin {
+  padding: 10vh 6vw 10vh 6vw;
+
+  .app-icon {
+    text-align: center;
+  }
+
+  .signin-inputs {
+    .signin-input-element {
+      padding-top: 5vh;
+      img {
+        height: 12vw;
+        padding-bottom: 2vw;
+        margin-right: 3vw;
+      }
+      input, input:active, input:focus, input:hover {
+        border: none;
+        box-shadow: none;
+        font-family: $font-arimo;
+        font-size: 5vw;
+        color: $text-color;
+        background: none;
+        width: 75%;
+        outline: none;
+      }
+      ::-webkit-input-placeholder {
+        color: $text-color;
+      }
+      .underline {
+        display: block;
+        width: 100%;
+        border: 1px solid $line-color;
+      }
+    }
+  }
+
+  .signin-button {
+    text-align: center;
+    button {
+      margin-top: 5vh;
+      width: 80%;
+      height: 10vw;
+      font-family: $font-trocchi;
+      font-size: 5.625vw;
+      font-weight: 600;
+      color: $light-text-color;
+      background: $background-color;
+      border: 2px solid $line-color;
+      border-radius: 18px;
+    }
+  }
+
+  p {
+    color: $text-color;
+    font-size: 4.5vw;
+    text-align: center;
+    padding-top: 4vw;
   }
 }
