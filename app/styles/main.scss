@@ -157,21 +157,26 @@ body {
       margin-top: 5vh;
       width: 80%;
       height: 10vw;
-      font-family: $font-trocchi;
-      font-size: 5.625vw;
-      font-weight: 600;
-      color: $light-text-color;
       background: $background-color;
       border: 2px solid $line-color;
       border-radius: 18px;
+      a {
+        font-family: $font-trocchi;
+        font-size: 5.625vw;
+        font-weight: 600;
+        color: $light-text-color;
+      }
     }
   }
 
-  p {
+  p { 
+    text-align: center;
+    padding-top: 2vw;
+    a {
     color: $text-color;
     font-size: 4.5vw;
-    text-align: center;
     padding-top: 4vw;
+    }
   }
 }
 
