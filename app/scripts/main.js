@@ -10,5 +10,8 @@ $(document).ready(function() {
     }); 
     $("#select-plan-button").click(function () {
     	alert("Your savings plan has been updated. For more information, please contact your local branch.");
-    })
+    });
+    $("#graphs-png-image").click(function () {
+    	$("#graphs-history-image").addClass("show-history");
+    });
 });
