@@ -131,7 +131,9 @@ body {
 
   .app-icon {
     text-align: center;
-    height: 50vw;
+    img {
+      height: 50vw;
+    }
   }
 
   .signin-inputs {
