@@ -32,7 +32,8 @@ var svg = d3.select("#chart").append("svg")
   .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 	
-$.getJSON("http://personality-insights-scotia.mybluemix.net/history_json",
+	d3.tsv(	"history.tsv"
+//$.getJSON("http://personality-insights-scotia.mybluemix.net/history_json",
 
 	function(data){
   	console.log(data)
