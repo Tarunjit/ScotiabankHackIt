@@ -1,0 +1,47 @@
+msg = {
+  "payload": "Finance",
+  "columns": [
+    {
+      "key": "Stock",
+      "type": "numeric",
+      "goal": "max",
+      "full_name": "Stock",
+      "is_objective": true
+    },
+    {
+      "key": "MutualFunds",
+      "type": "numeric",
+      "goal": "max",
+      "full_name": "MutualFunds",
+      "is_objective": true
+    },
+    {
+      "key": "GIC",
+      "type": "numeric",
+      "goal": "max",
+      "full_name": "GIC",
+      "is_objective": true
+    },
+    {
+      "key": "SavingsAccount",
+      "type": "numeric",
+      "goal": "max",
+      "full_name": "SavingsAccount",
+      "is_objective": true
+    }
+  ],
+  "options": [
+    {
+      "key": " 1",
+      "name": "Patricio",
+      "values": {
+        "Stock": 0.94,
+        "MutualFunds": 8.24,
+        "GIC": 31.22,
+        "SavingsAccount": 13.08
+      }
+    }
+  ]
+}
+
+return msg;

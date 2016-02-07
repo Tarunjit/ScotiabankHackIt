@@ -1,0 +1,9 @@
+var tweets = msg.payload.tweets;
+var arr = new Array();
+var cont = 0;
+var text = "";
+for(var i = 0;i<tweets.length;i++){
+    text = text + " " + tweets[i].message.object.summary;
+    arr[cont++] = tweets[i].message.object.summary;
+}
+return {payload:text};
