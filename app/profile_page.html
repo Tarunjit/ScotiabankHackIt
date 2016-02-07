@@ -1,8 +1,11 @@
+<!-- 
+This application uses Bootstrap CSS3, JQuery and other libraries included by the Yeoman scaffolder under their respective licenses. This application has been made by and is the copyright work of Team Pocket Money, consisting of Alberto, Christina, Jyotheeswar, Shuiyao, Patricio and Tarunjit.
+-->
 <!doctype html>
 <html class="no-js" lang="">
   <head>
     <meta charset="utf-8">
-    <title>ScotiabankHackIt</title>
+    <title>Home | Pocket Money</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -16,7 +19,6 @@
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/charts.css">
     <!-- endbuild -->
     <!-- build:js scripts/vendor/modernizr.js -->
     <script src="/bower_components/modernizr/modernizr.js"></script>
@@ -24,36 +26,24 @@
     
   </head>
   <body>
-	  <script src="https://d3js.org/d3.v3.min.js"></script>
     <!--[if lt IE 10]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
-
     <div class="nav-bar">
-        <a href="home.html">
-            <img class="back-button" src="images/go_back_button.png" href="home.html"/>
+        <a href="investment_plan.html">
+            <img class="back-button" src="images/go_back_button.png" href="investment_plan.html"/>
         </a>
-        <span class="title">Expenditures</span>
+        <span class="title">Personal Profile</span>
         <a href="home.html">
             <img class="home-button" src="images/home_icon.png" href="home.html"/>
         </a>
     </div>
-    <div class="charts">
-      <p class="title-message"><img class="emoji-large" src="images/whatsapp_emoji/Emoji Smiley/Emoji Smiley-41.png"/>Woohoo!! You're in the top 10% of people in your demoographics.</h1>
-		  <p class="secondary-message">You're on the straight and narrow, and will pay off your debts. Looks like you might even save a little!<h3>
-	  
-		  <img class="graph-image" src="images/graph.png">
-		  <div class="alert alert-info" role="alert">
-        <h4>Seems like you spent alot more on Food<!--<span id="risk-category">< change this dynamically></span>-->
-			   than your peers. </h4>
-		  </div>
-      <div class="button-div">
-        <button class="expenditure-button"><a href="expenditure_list.html">Expenditure details</a></button>
-        <button class="savings-button"><a href="investment_plan.html">Your Savings</a></button>
-      </div>
-
+    <div class="profile">
+        <p>Your personal profile</p>
+        <img src="images/christina.jpg"/>
     </div>
-    
+
+
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
@@ -80,9 +70,6 @@
 
     <!-- build:js(.tmp) scripts/main.js -->
     <script src="scripts/main.js"></script>
-    <script src="scripts/groupedcharts.js"></script>
-	
     <!-- endbuild -->
-
   </body>
 </html>

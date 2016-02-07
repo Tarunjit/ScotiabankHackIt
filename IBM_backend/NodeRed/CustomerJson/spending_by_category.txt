@@ -1,0 +1,17 @@
+all_groceries = [];
+for (var day = 0; day < 30; day++) {
+    all_groceries[day] =0;
+}
+
+
+for (var i = 0; i < msg.payload.length; i++) {
+    if (msg.payload[i].category === "groceries"){
+        var day = msg.payload[i].day;
+        var amount = msg.payload[i].amount;
+        total_amount = all_groceries[day] + amount;
+        all_groceries[day] = total_amount;
+    }
+}
+
+msg.payload = all_groceries;
+return msg;
