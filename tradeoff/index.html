@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Page Title</title>
+    <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+</head>
+
+<body>
+    
+
+    <div id="tra"></div>
+
+    <script type="text/javascript" src="http://ta-cdn.mybluemix.net/v1/TradeoffAnalytics.js"></script>
+    <script type="text/javascript">
+
+    var problem = {
+        "payload": "x",
+        "subject": "x",
+        "columns": [{
+            "key": "Risk",
+            "type": "numeric",
+            "goal": "max",
+            "full_name": "Risk",
+            "is_objective": true
+        }, {
+            "key": "ShortTerm",
+            "type": "numeric",
+            "goal": "max",
+            "full_name": "ShortTerm",
+            "is_objective": true
+        }, {
+            "key": "MidTerm",
+            "type": "numeric",
+            "goal": "max",
+            "full_name": "MidTerm",
+            "is_objective": true
+        }, {
+            "key": "LongTerm",
+            "type": "numeric",
+            "goal": "max",
+            "full_name": "LongTerm",
+            "is_objective": true
+        }],
+        "options": [{
+            "key": " 1",
+            "name": "OBIOX",
+            "values": {
+                "Risk": 0.94,
+                "YTD": 8.24,
+                "ShortTerm": 27.74,
+                "MidTerm": 31.22,
+                "LongTerm": 13.08
+            }
+        }, {
+            "key": " 2",
+            "name": "OSPHX",
+            "values": {
+                "Risk": 0.84,
+                "YTD": 12.69,
+                "ShortTerm": 40.09,
+                "MidTerm": 24.55,
+                "LongTerm": 12.81
+            }
+        }]
+    };
+    
+    $(document).ready(function() {
+        var taClient = new TradeoffAnalytics({
+            dilemmaServiceUrl: "https://personality-insights-scotia.mybluemix.net/pm/dilemmas",
+            errCallback: function() {
+                console.log("we've got error.");
+            },
+        }, 'tra');
+        taClient.start(function() {
+            console.log("we are done with initialization");
+            // The size of the Tradeoff Analytics visualization could be changed here
+            taClient.resize(800, 500);
+            taClient.show(problem, function() {
+                console.log("we've got answer");
+            });
+        });
+    });
+
+
+    var taClient = "";
+    </script>
+</body>
+
+</html>
