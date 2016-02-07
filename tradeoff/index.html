@@ -8,64 +8,92 @@
 </head>
 
 <body>
-    
-
     <div id="tra"></div>
-
     <script type="text/javascript" src="http://ta-cdn.mybluemix.net/v1/TradeoffAnalytics.js"></script>
     <script type="text/javascript">
-
     var problem = {
-        "payload": "x",
+        "payload": "Finance",
         "subject": "x",
         "columns": [{
-            "key": "Risk",
+            "key": "Stocks",
             "type": "numeric",
             "goal": "max",
-            "full_name": "Risk",
+            "full_name": "Stocks",
             "is_objective": true
         }, {
-            "key": "ShortTerm",
+            "key": "MutualFunds",
             "type": "numeric",
             "goal": "max",
-            "full_name": "ShortTerm",
+            "full_name": "MutualFunds",
             "is_objective": true
         }, {
-            "key": "MidTerm",
+            "key": "GIC",
             "type": "numeric",
             "goal": "max",
-            "full_name": "MidTerm",
+            "full_name": "GIC",
             "is_objective": true
         }, {
-            "key": "LongTerm",
+            "key": "CashSavings",
             "type": "numeric",
             "goal": "max",
-            "full_name": "LongTerm",
+            "full_name": "CashSavings",
             "is_objective": true
         }],
-        "options": [{
+        "options": [
+        {
             "key": " 1",
-            "name": "OBIOX",
+            "name": "Patricio",
             "values": {
-                "Risk": 0.94,
-                "YTD": 8.24,
-                "ShortTerm": 27.74,
-                "MidTerm": 31.22,
-                "LongTerm": 13.08
+                "Stocks": 1.94,
+                "MutualFunds": 3.74,
+                "GIC": 7.22,
+                "CashSavings": 9.08
             }
-        }, {
+        },
+        {
             "key": " 2",
-            "name": "OSPHX",
+            "name": "Jose",
             "values": {
-                "Risk": 0.84,
-                "YTD": 12.69,
-                "ShortTerm": 40.09,
-                "MidTerm": 24.55,
-                "LongTerm": 12.81
+                "Stocks": 8.94,
+                "MutualFunds": 1.74,
+                "GIC": 16.22,
+                "CashSavings": 20.08
             }
-        }]
+        },
+        {
+            "key": " 3",
+            "name": "Christinaki",
+            "values": {
+                "Stocks": 19.94,
+                "MutualFunds": 50.74,
+                "GIC": 200.22,
+                "CashSavings": 0.08
+            }
+        },
+        {
+            "key": " 4",
+            "name": "Tarun",
+            "values": {
+                "Stocks": 27.94,
+                "MutualFunds": 30.74,
+                "GIC": 167.22,
+                "CashSavings": 120.08
+            }
+        },
+        {
+            "key": " 5",
+            "name": "Arvind",
+            "values": {
+                "Stocks": 140.94,
+                "MutualFunds": 70.74,
+                "GIC": 60.22,
+                "CashSavings": 90.08
+            }
+        }
+
+        ]
     };
-    
+
     $(document).ready(function() {
         var taClient = new TradeoffAnalytics({
             dilemmaServiceUrl: "https://personality-insights-scotia.mybluemix.net/pm/dilemmas",
